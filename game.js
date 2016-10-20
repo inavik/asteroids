@@ -44,6 +44,20 @@
           ship.htmlElem.style.transform = 'rotate(' + ship.angle + 'deg)';
           console.log('rotate(' + ship.angle + 'deg)');
           // ship.htmlElem.style.transform = rotate(90);
+        } else if (event.keyCode === 39) {
+          ship.angle += 5;
+          // console.log(ship.angle);
+          ship.htmlElem.style.transform = 'rotate(' + ship.angle + 'deg)';
+        }
+
+        else if (event.keyCode === 38) {
+          ship.velocity += 5;
+          var shipMove = getShipMovement(ship.velocity, ship.angle);
+          console.log('shipMove');
+          ship.htmlElem.style.top = '' + shipMove.top + 'px';
+          ship.htmlElem.style.left = '' + shipMove.left + 'px';
+          console.log(ship);
+          // ship.htmlElem.style.position = '' + getShipMovement(ship.velocity, ship.angle) + '';
         }
   // }
 
