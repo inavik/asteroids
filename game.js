@@ -5,6 +5,13 @@
 
     // Create your "ship" object and any other variables you might need...
 
+    var ship = {
+      htmlElem: shipElem
+      velocity: 0,
+      angle: 0
+    };
+
+    console.log(ship);
 
     var allAsteroids = [];
     shipElem.addEventListener('asteroidDetected', function (event) {
