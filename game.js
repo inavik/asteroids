@@ -8,8 +8,9 @@
     var ship = {
       htmlElem: shipElem,
       velocity: 0,
-      angle: 0
+      angle: 90
     };
+
 
     console.log(ship);
 
@@ -37,9 +38,12 @@
     function handleKeys(event) {
         console.log(event.keyCode);
         if (event.keyCode === 37) {
-          console.log('gotit');
-          ship.htmlElem.style.transform = 'rotate(-90deg)';
-          // ship.htmlElem.style.transitionDuration = ('.1s');
+          // console.log('gotit');
+          ship.angle -= 5;
+          console.log(ship.angle);
+          ship.htmlElem.style.transform = 'rotate(' + ship.angle + 'deg)';
+          console.log('rotate(' + ship.angle + 'deg)');
+          // ship.htmlElem.style.transform = rotate(90);
         }
   // }
 
