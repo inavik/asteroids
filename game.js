@@ -8,9 +8,11 @@
     var ship = {
       htmlElem: shipElem,
       velocity: 0,
-      angle: 90
+      angle: 0
     };
 
+    ship.htmlElem.style.top = '500px';
+    ship.htmlElem.style.left = '30px';
 
     console.log(ship);
 
@@ -51,13 +53,10 @@
         }
 
         else if (event.keyCode === 38) {
-          ship.velocity += 5;
-          var shipMove = getShipMovement(ship.velocity, ship.angle);
-          console.log('shipMove');
-          ship.htmlElem.style.top = '' + shipMove.top + 'px';
-          ship.htmlElem.style.left = '' + shipMove.left + 'px';
-          console.log(ship);
-          // ship.htmlElem.style.position = '' + getShipMovement(ship.velocity, ship.angle) + '';
+          ship.velocity += 2;
+        }
+        else if (event.keyCode === 40) {
+          ship.velocity -= 5;
         }
   // }
 
@@ -79,7 +78,21 @@
         // NOTE: you will need to change these arguments to match your ship object!
         // What does this function return? What will be in the `move` variable?
         // Read the documentation!
-        // var move = getShipMovement(shipsCurrentVelocity, shipsCurrentAngle);
+        var move = getShipMovement(ship.velocity, ship.angle); // returns the object left and top (at bottom)
+        var top = parseInt(ship.htmlElem.style.top); // 20
+        // console.log(top, 'TOP');
+        top -= move.top; // don't understand this line // top = top - move.top
+
+
+        // console.log(move.top);
+        // console.log(top, 'another top');
+        ship.htmlElem.style.top = top + 'px'; // 20px
+        // console.log(ship.htmlElem.style.top);
+
+        var left = parseInt(ship.htmlElem.style.left);
+        left += move.left;
+        ship.htmlElem.style.left = left + 'px';
+
 
 
         // Move the ship here!
