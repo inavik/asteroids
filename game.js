@@ -17,10 +17,12 @@
     console.log(ship);
 
     var allAsteroids = [];
+
     shipElem.addEventListener('asteroidDetected', function (event) {
         // You can detect when a new asteroid appears with this event.
         // The new asteroid's HTML element will be in:  event.detail
-
+        allAsteroids.push(event.detail);
+        console.log(event.detail, "HI");
         // What might you need/want to do in here?
 
     });
@@ -56,7 +58,7 @@
           ship.velocity += 2;
         }
         else if (event.keyCode === 40) {
-          ship.velocity -= 5;
+          ship.velocity -= 3;
         }
   // }
 
