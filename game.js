@@ -125,17 +125,15 @@
      */
     function checkForCollisions(shipCoordinates, asteroidCoordinates) {
 
-      for (i = 0, i < allAsteroids.length, i++);
+      for (i = 0; i < allAsteroids.length; i++) {
       var shipCoordinates = ship.htmlElem.getBoundingClientRect();
                         //  (produces top, left, width, height) of ship
       var asteroidCoordinates = [i].getBoundingClientRect();
                       //   (produces top, left, width, height of asteroid)
 
-      if ()
         // Implement me!
-
-
-      console.log('A crash occurred!';
+        
+      }
 
     }
 
