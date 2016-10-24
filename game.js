@@ -22,7 +22,10 @@
         // You can detect when a new asteroid appears with this event.
         // The new asteroid's HTML element will be in:  event.detail
         allAsteroids.push(event.detail);
-        console.log(event.detail, "HI");
+        // console.log(event.detail, "HI");
+        // console.log(allAsteroids);
+        console.log('asteroid box: ',event.detail.getBoundingClientRect());
+        console.log('ship box: ', ship.htmlElem.getBoundingClientRect());
         // What might you need/want to do in here?
 
     });
@@ -110,6 +113,8 @@
      * asteroid that was hit:
      *    crash(someAsteroidElement);
      *
+
+
      * You can get the bounding box of an element using:
      *    someElement.getBoundingClientRect();
      *
@@ -118,9 +123,19 @@
      *
      * @return void
      */
-    function checkForCollisions() {
+    function checkForCollisions(shipCoordinates, asteroidCoordinates) {
 
+      for (i = 0, i < allAsteroids.length, i++);
+      var shipCoordinates = ship.htmlElem.getBoundingClientRect();
+                        //  (produces top, left, width, height) of ship
+      var asteroidCoordinates = [i].getBoundingClientRect();
+                      //   (produces top, left, width, height of asteroid)
+
+      if ()
         // Implement me!
+
+
+      console.log('A crash occurred!';
 
     }
 
